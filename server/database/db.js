@@ -9,8 +9,8 @@ const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
 
 const Connection = async () => {
-  // const URL = `mongodb://${USERNAME}:${PASSWORD}@ac-w4ubola-shard-00-00.dnabifl.mongodb.net:27017,ac-w4ubola-shard-00-01.dnabifl.mongodb.net:27017,ac-w4ubola-shard-00-02.dnabifl.mongodb.net:27017/?ssl=true&replicaSet=atlas-13nrhj-shard-0&authSource=admin&retryWrites=true&w=majority`;
-  const URL=`mongodb://${USERNAME}:${PASSWORD}@ac-o236hn6-shard-00-00.blbqcfn.mongodb.net:27017,ac-o236hn6-shard-00-01.blbqcfn.mongodb.net:27017,ac-o236hn6-shard-00-02.blbqcfn.mongodb.net:27017/?ssl=true&replicaSet=atlas-110ocu-shard-0&authSource=admin&retryWrites=true&w=majority`
+ 
+  const URL = `mongodb://${USERNAME}:${PASSWORD}@ac-lq1jp6p-shard-00-00.4toknla.mongodb.net:27017,ac-lq1jp6p-shard-00-01.4toknla.mongodb.net:27017,ac-lq1jp6p-shard-00-02.4toknla.mongodb.net:27017/?ssl=true&replicaSet=atlas-6teq0h-shard-0&authSource=admin&retryWrites=true&w=majority`;
   try {
     await mongoose.connect(URL, { useUnifiedTopology: true }); //mongoose.connect is a asyncronous function so that's why we are using await and async
     console.log("Server is successfully connected to mongodb");
